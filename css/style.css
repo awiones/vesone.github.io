@@ -1,0 +1,729 @@
+
+:root {
+    --primary: #E59866;
+    --secondary: #FAF3EB;
+    --light: #FFFFFF;
+    --dark: #2B2825;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.font-secondary {
+    font-family: 'Pacifico', cursive;
+}
+
+h1,
+h2,
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+}
+
+.border-inner {
+    position: relative;
+}
+
+.border-inner * {
+    position: relative;
+    z-index: 1;
+}
+
+.border-inner::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    background: none;
+    border: 1px solid var(--light);
+    z-index: 0;
+}
+
+.btn-square {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 99;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Oswald', sans-serif;
+    padding: 30px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        padding: 10px 0;
+    }
+}
+
+.hero-header {
+    background: url(../img/fotbar2.jpg) top left no-repeat;
+    background-position: center;
+    background-position-y: 75%;
+    background-position-x: left;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-header {
+      background-size: cover;
+      background-position: center;
+      background-position-y: 50%;
+      background-position-x: center;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 992px) {
+    .hero-header {
+      background-size: cover;
+      background-position: center;
+      background-position-y: 75%;
+      background-position-x: left;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .hero-header {
+      background-size: cover;
+      background-position: center;
+      background-position-y: 75%;
+      background-position-x: left;
+    }
+  }
+  
+
+.btn-play {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 16px;
+    height: 26px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    padding: 18px 20px 20px 28px;
+    background: #FFFFFF;
+}
+
+.btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    transition: all 200ms;
+}
+
+.btn-play span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    left: -1px;
+    border-left: 16px solid var(--primary);
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+        opacity: 0;
+    }
+}
+
+#videoModal .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+#videoModal .modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+#videoModal .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: -30px;
+    z-index: 999;
+    font-size: 30px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background: #000000;
+    opacity: 1;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 10px;
+    left: 50%;
+    bottom: 0;
+    margin-left: -30px;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 2px;
+    left: 50%;
+    bottom: 4px;
+    margin-left: -90px;
+    background: var(--primary);
+}
+
+.service::after,
+.contact::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 45px);
+    top: 135px;
+    left: 0;
+    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/service.jpg) center center no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.contact::after {
+    background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bg-offer {
+    background: linear-gradient(rgba(43, 40, 37, .9), rgba(43, 40, 37, .9)), url(../img/Foto\ Bareng.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.team-item img {
+    width: 100%; /* Keep the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while preserving aspect ratio */
+    transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+.team-item:hover img {
+    transform: scale(1.1); /* Zoom in */
+    filter: none; /* Remove blur */
+}
+
+.team-item .team-overlay {
+    transition: opacity 0.5s ease; /* Smooth opacity transition for overlay */
+    opacity: 0; /* Hide overlay by default */
+}
+
+.team-item:hover .team-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.testimonial-carousel .owl-dots {
+    height: 45px;
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 2px;
+    width: 10px;
+    height: 25px;
+    background: #DDDDDD;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    height: 45px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+    opacity: .1;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    opacity: 1;
+}
+
+.bg-img {
+    background: linear-gradient(rgba(43, 40, 37, .5), rgba(43, 40, 37, .5)), url(../img/bg.jpg) center center no-repeat;
+    background-size: cover;
+}   
+
+.div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+.div.gallery:hover {
+  border: 1px solid #777;
+}
+
+.div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.member-box {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 80%; /* Ensure the box takes the full width */
+    min-height: 200px; /* Set a minimum height so it won't shrink */
+    max-height: 2100px; /* Set a maximum height to prevent expansion */
+}
+
+.member-box:hover {
+    transform: translateY(-5px);
+}
+
+.member-box img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the box area */
+    border-radius: 10px 0 0 10px;
+    min-width: 150px; /* Ensures the image always has a minimum width */
+    min-height: 200px; /* Ensures the image always has a minimum height */
+}
+
+.member-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    overflow: hidden;
+    max-height: 100%; 
+}
+
+.member-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ig-user {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; 
+    line-height: 1.3em;
+    flex-shrink: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.col-lg-6, .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+@media (max-width: 768px) {
+    .member-box {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .member-box img {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover; /* Ensures the image scales well */
+    }
+
+    .description {
+        white-space: normal;
+        overflow: auto;
+    }
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white !important;
+    text-align: center;
+    z-index: 1001;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    cursor: default;
+}
+
+.text-container h1 {
+    color: white !important;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    cursor: default;
+}
+
+#loader-wrapper {
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    z-index: 1001;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+
+
+/* Loader sections (left and right for sliding effect) */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+    transform: translateX(0);
+}
+
+#loader-wrapper .section-left {
+    left: 0;
+}
+
+#loader-wrapper .section-right {
+    right: 0;
+}
+
+/* Animation for sliding sections */
+.loaded #loader-wrapper .section-left {
+    transform: translateX(-100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .section-right {
+    transform: translateX(100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+}
+
+/* Text typing and blinking cursor */
+#dynamic-text {
+    border-right: 2px solid white;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+
+/* Main content styling */
+#main-content {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.typed-text strong {
+    font-weight: bold;
+}
+.typed-text em {
+    font-style: italic;
+}
+
+/* Timeline section styles */
+.timeline-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines if necessary */
+    gap: 20px; /* Space between each timeline item */
+    justify-content: center; /* Center items horizontally */
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    width: 200px; /* Fixed width for each item */
+    padding: 15px;
+    background: var(--secondary); /* Light background for the card */
+    border: 2px solid var(--primary); /* Border color matching the primary color */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer for clickable effect */
+}
+
+.timeline-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for click effect */
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary); /* Title color matching the primary color */
+}
+
+.timeline-description {
+    margin: 0;
+    color: #333; /* Dark text for readability */
+    font-size: 0.9rem;
+}
+
+.achievement-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    gap: 20px; /* Space between each achievement card */
+    justify-content: center; /* Center items horizontally */
+}
+
+.achievement-card {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure the card takes full width available */
+    max-width: 600px; /* Optional: Adjust to control the max width of the card */
+    padding: 15px;
+    background: var(--secondary); /* Light background for the card */
+    border: 1px solid var(--primary); /* Border color matching the primary color */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer for clickable effect */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.achievement-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for click effect */
+}
+
+.achievement-img {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--primary); /* Border around the image */
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-title {
+    margin-top: 0;
+    color: var(--primary); /* Title color matching the primary color */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.achievement-description {
+    margin: 0;
+    color: #333; /* Dark text for readability */
+    font-size: 0.9rem;
+}
+
+/* Thank You Box styles */
+.thank-you-box {
+    padding: 40px;
+    background: var(--secondary); /* Light background for the box */
+    border: 2px solid var(--primary); /* Border color matching the primary color */
+    border-radius: 8px; /* Slightly rounded corners */
+    max-width: 1200px; /* Increase max-width for a larger box */
+    margin: 0 auto; /* Center the box horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visual appeal */
+}
+
+.thank-you-box p {
+    color: #333; /* Dark text for readability */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    line-height: 1.8; /* Increase line height for better text spacing */
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary); /* Background color of the track */
+    border-radius: 8px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary); /* Color of the scrollbar thumb */
+    border-radius: 8px; /* Rounded corners for the thumb */
+    border: 3px solid var(--secondary); /* Border around the thumb to match the track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--primary), 10%); /* Darken the thumb on hover for better visibility */
+}
